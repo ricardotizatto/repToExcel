@@ -26,13 +26,12 @@ public class Task {
     class NewTask extends TimerTask {
 
         Timer counter = null;
-        String entry = "D:\\teste";
 
         public void run() {
             if (counter == null) {
                 System.out.println("Reading");
-                File source = new File("X:\\Unicoop\\Relatorios para converter");
-                File destiny = new File("X:\\Unicoop\\Relatorios convertidos");
+                File source = new File("coloca o diretorio que vai ser colocado os arquivos para converter");
+                File destiny = new File("coloca o diretorio que vai aparecer os relatorios convertidos");
 
                 try {
                     copyAll(source, destiny, false);
@@ -90,7 +89,7 @@ public class Task {
 
         try {
 
-            p = Runtime.getRuntime().exec("X:\\Unicoop\\Rep2Excel\\rep2excel-trial\\Rep2excel.exe  -i:" + movedFile.getPath());
+            p = Runtime.getRuntime().exec("Diretorio que esta o repToExcel\\Rep2Excel\\rep2excel-trial\\Rep2excel.exe  -i:" + movedFile.getPath());
 
             input = new BufferedReader(new InputStreamReader(p.getInputStream()));
 
